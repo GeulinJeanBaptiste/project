@@ -1,0 +1,7 @@
+.ListMenu {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  list-style-type: none;
+  background-color: fuchsia;
+}
