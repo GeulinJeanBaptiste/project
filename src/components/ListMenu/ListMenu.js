@@ -6,9 +6,14 @@ const ListMenu = (props) => {
     <ul className="ListMenu">
       {props.sendEntries.map((value, index) => {
         return (
-          <a href={value.url} key={index}>
-            <li>{value.entry}</li>
-          </a>
+          <li //Un event ne peut pas être directement conditionné
+            onClick={
+              value.entry === "Article" ? props.handleDisplayArticle : null
+            }
+            key={index}
+          >
+            {value.entry}
+          </li>
         );
       })}
     </ul>
